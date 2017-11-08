@@ -1,0 +1,56 @@
+<html ng-app="fantabtic" ng-controller="MainController">
+
+<head>
+  <title>Fantabtic &bull; New Tab</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="lib/fantabtic/fantabtic.css">
+</head>
+
+<body>
+  <!-- Wallpaper -->
+  <img class="wallpaper" ng-src="{{ wallpaper }}">
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Central container -->
+    <div class="container">
+
+      <!-- Quoate -->
+      <h1 class="title" title="{{ quote.author }}" ng-bind="quote.quote"></h1>
+
+      <!-- Top sites -->
+      <div class="top-sites row justify-content-lg-center">
+
+        <div class="col-lg-6">
+
+          <div class="row">
+
+            <div class="col-lg-4" ng-repeat="site in topSites">
+
+              <!-- Site -->
+              <a class="site" ng-href="{{ site.url }}" title="{{ site.title }}">
+
+                <!-- Site image -->
+                <img class="site-image" ng-src="{{ site.image }}">
+
+                <!-- Site title -->
+                <span class="site-title" ng-bind="site.title"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/popper/popper.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="lib/fantabtic/fantabtic.js"></script>
+</body>
+
+</html>

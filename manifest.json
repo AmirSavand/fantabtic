@@ -1,0 +1,25 @@
+{
+  "name": "Fantabtic",
+  "description": "Make your new tab a fantastic one.",
+  "version": "0.1.0",
+  "incognito": "split",
+  "permissions": [
+    "topSites"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "<all_urls>"
+    ],
+    "js": [
+      "lib/jquery/jquery.js",
+      "lib/angular/angular.js",
+      "lib/popper/popper.js",
+      "lib/bootstrap/bootstrap.js",
+      "lib/fantabtic/fantabtic.js"
+    ]
+  }],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "manifest_version": 2
+}
