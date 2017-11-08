@@ -28,7 +28,7 @@
 
           <div class="row">
 
-            <div class="col-lg-4" ng-repeat="site in topSites">
+            <div class="col-lg-4" ng-repeat="site in topSites" ng-show="$index < topSitesLimit">
 
               <!-- Site -->
               <a class="site" ng-href="{{ site.url }}" title="{{ site.title }}">
@@ -38,9 +38,15 @@
 
                 <!-- Site title -->
                 <span class="site-title" ng-bind="site.title"></span>
-                
+
               </a>
             </div>
+
+            <!-- View more -->
+            <a class="view-more" ng-click="viewAllSites()"
+              ng-if="topSitesLimit != topSites.length">
+              View More
+            </a>
           </div>
         </div>
       </div>
