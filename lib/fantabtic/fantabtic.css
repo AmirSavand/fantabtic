@@ -48,6 +48,33 @@ body.loaded {
     box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.25);
 }
 
+/* Header */
+
+.header {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 20px;
+    transition: all 0.3s;
+}
+
+.header:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Time */
+
+.time {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.time .time-numbers {
+    margin-left: 10px;
+}
+
+.time .time-ampm {
+    font-size: 0.9rem;
+}
 
 /* Content */
 
