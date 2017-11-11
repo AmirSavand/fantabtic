@@ -37,7 +37,9 @@
     <div class="container">
 
       <!-- Quoate -->
-      <h1 class="title" title="{{ quote.author }}" ng-bind="quote.quote"></h1>
+      <h1 class="title animated fadeIn" title="Quote of the day by {{ quote.author }}"
+        ng-if="quote" ng-bind="quote.quote" data-tooltip>
+      </h1>
 
       <!-- Top sites -->
       <div class="top-sites row justify-content-lg-center">
