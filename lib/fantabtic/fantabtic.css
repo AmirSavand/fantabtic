@@ -1,7 +1,3 @@
-/* Import */
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,800");
-
 /* Global */
 
 body::-webkit-scrollbar-track,
@@ -19,7 +15,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 ::selection {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.1);
 }
 
 img {
@@ -28,6 +24,13 @@ img {
 
 a {
     text-decoration: none !important;
+    outline: none !important;
+    text-shadow: 1px 1px 1px #000;
+}
+
+body,
+div {
+    font-family: Roboto, sans-serif;
 }
 
 
@@ -36,12 +39,12 @@ a {
 body {
     color: #fff;
     cursor: default;
-    font-family: Montserrat, Roboto, sans-serif;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     box-shadow: inset 0 0 0 10000px #000;
     transition: all 0.5s ease-in-out;
+    padding-bottom: 80px;
 }
 
 body.loaded {
@@ -78,15 +81,18 @@ body.loaded {
 
 /* Content */
 
-.cintent {
-    position: relative;
+.content .container {
+    padding-top: 100px;
 }
 
-.content .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@media (min-width: 992px) {
+    .content .container {
+        padding-top: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 
