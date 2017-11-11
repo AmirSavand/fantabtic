@@ -76,6 +76,24 @@
     <script src="lib/popper/popper.js"></script>
     <script src="lib/bootstrap/bootstrap.js"></script>
     <script src="lib/fantabtic/fantabtic.js"></script>
+  <!-- Footer -->
+  <div class="footer">
+
+    <!-- Apps -->
+    <div class="apps">
+
+      <!-- Store -->
+      <a class="app" ng-href="https://chrome.google.com/webstore" title="Web Store" data-tooltip>
+        <img ng-src="lib/fantabtic/store.png">
+      </a>
+
+      <!-- App -->
+      <a class="app" ng-click="app.launch()" ng-if="app.type !== 'extension'"
+        title="{{ app.name }}" data-tooltip ng-repeat="app in apps">
+        <img ng-src="{{ app.getIcon() }}">
+      </a>
+    </div>
+  </div>
 </body>
 
 </html>
