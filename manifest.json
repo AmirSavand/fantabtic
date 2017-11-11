@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "incognito": "split",
   "permissions": [
-    "topSites"
+    "topSites",
+    "management"
   ],
   "content_scripts": [{
     "matches": [
