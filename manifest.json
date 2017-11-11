@@ -1,7 +1,7 @@
 {
   "name": "Fantabtic",
   "description": "Turn your boring new tab page into an inspirational beautiful page.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "incognito": "split",
   "permissions": [
     "topSites",
