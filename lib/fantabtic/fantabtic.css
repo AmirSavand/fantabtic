@@ -169,7 +169,7 @@ body.loaded {
 
 .title {
     text-align: center;
-    text-shadow: 2px 2px 1px #000;
+    text-shadow: 1px 1px 1px #000;
     font-weight: 300;
 }
 
@@ -177,5 +177,57 @@ body.loaded {
 /* Wallpaper */
 
 .wallpaper {
+    display: none;
+}
+
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.app {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: all 0.1s;
+}
+
+.app:hover {
+    transform: scale(1.2);
+    box-shadow: inset 0 -8px 20px rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.app img {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* Tooltip */
+
+.tooltip {
+    top: -10px !important;
+}
+
+.tooltip-inner {
+    background: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-shadow: 1px 1px 1px #000;
+    max-width: initial;
+}
+
+.tooltip .arrow {
     display: none;
 }
