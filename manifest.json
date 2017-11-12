@@ -5,7 +5,8 @@
   "incognito": "split",
   "permissions": [
     "topSites",
-    "management"
+    "management",
+    "storage"
   ],
   "content_scripts": [{
     "matches": [
