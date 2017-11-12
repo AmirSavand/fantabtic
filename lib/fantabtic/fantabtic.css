@@ -82,6 +82,27 @@ body.loaded {
 }
 
 
+/* Menu Icon */
+
+.menu-icon {
+    float: right;
+    font-size: 1.6rem;
+    margin-top: -5px;
+    border-radius: 2px;
+    width: 40px;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.menu-icon:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.menu-icon:active {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
 /* Content */
 
 .content .container {
