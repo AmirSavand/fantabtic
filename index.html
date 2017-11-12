@@ -109,6 +109,37 @@
         </div>
         <!-- Body -->
         <div class="modal-body">
+          <!-- Section -->
+          <h4>Setting</h4>
+          <hr>
+          <!-- Settings -->
+          <form class="settings">
+            <!-- Form group -->
+            <div class="form-group" ng-repeat="(key, setting) in settingFields">
+              <!-- Boolean -->
+              <label class="form-check-label" ng-if="setting.value === true || setting.value === false">
+                <input class="form-check-input" type="checkbox" ng-model="setting.value" ng-change="changeSetting(key)">
+                <span ng-bind="setting.label"></span>
+              </label>
+              <!-- String -->
+              <div ng-if="setting.value !== true && setting.value !== false">
+                <label ng-bind="setting.label"></label>
+                <input type="text" class="form-control form-control-sm" ng-change="changeSetting(key)"
+                  placeholder="{{ setting.placeholder }}" ng-model="setting.value">
+              </div>
+            </div>
+            <!-- Reset settings -->
+            <a ng-click="resetToDefault()" class="btn btn-sm btn-outline-secondary">Reset to default settings</a>
+          </form>
+          <br>
+          <!-- Section -->
+          <h4>Links</h4>
+          <hr>
+          <div class="about">
+            <a class="btn btn-sm btn-outline-secondary" ng-href="https://github.com/AmirSavand/fantabtic">GitHub</a>
+            <a class="btn btn-sm btn-outline-secondary" ng-href="https://github.com/AmirSavand/fantabtic/issues">Issues</a>
+            <a class="btn btn-sm btn-outline-secondary" ng-href="{{ mailto }}">Feedback</a>
+            <a class="btn btn-sm btn-success" ng-href="https://chrome.google.com/webstore/search/fantabtic">Rate :)</a>
           </div>
         </div>
       </div>
