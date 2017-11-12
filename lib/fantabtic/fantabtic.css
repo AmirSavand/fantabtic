@@ -1,16 +1,16 @@
 /* Global */
 
-body::-webkit-scrollbar-track,
-body::-webkit-scrollbar {
-    background: #fff;
+::-webkit-scrollbar-track,
+::-webkit-scrollbar {
+    background: #333;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 4px;
-    background: transparent;
+    background: #000;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #666;
 }
 
@@ -134,6 +134,12 @@ body.loaded {
 
 .top-sites {
     margin-top: 10%;
+}
+
+.top-sites>div {
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 385px;
 }
 
 .site {
