@@ -20,13 +20,13 @@
     <div class="time">
 
       <!-- Fri, Nov 10 -->
-      <span class="time-date" ng-bind="date | date:'EEE, MMM MM'"></span>
+      <span ng-if="settings.date" class="time-date" ng-bind="date | date:'EEE, MMM MM'"></span>
 
       <!-- 6:20 -->
-      <span class="time-numbers" ng-bind="date | date:'h:mm'"></span>
+      <span ng-if="settings.time" class="time-numbers" ng-bind="date | date:'h:mm'"></span>
 
       <!-- AM/PM -->
-      <span class="time-ampm" ng-bind="date | date:'a'"></span>
+      <span ng-if="settings.time" class="time-ampm" ng-bind="date | date:'a'"></span>
     </div>
 
     <!-- Menu -->
@@ -41,11 +41,11 @@
 
       <!-- Quoate -->
       <h1 class="title animated fadeIn" title="Quote of the day by {{ quote.author }}"
-        ng-if="quote" ng-bind="quote.quote" data-tooltip>
+        ng-if="quote && settings.quote" ng-bind="quote.quote" data-tooltip>
       </h1>
 
       <!-- Top sites -->
-      <div class="top-sites row justify-content-lg-center">
+      <div class="top-sites row justify-content-lg-center" ng-if="settings.topSites">
 
         <div class="col-lg-6">
 
@@ -65,7 +65,8 @@
             </div>
 
             <!-- View more -->
-            <a class="view-more animated fadeIn" ng-click="viewAllSites()" ng-if="topSitesLimit != topSites.length">
+            <a class="view-more animated fadeIn" ng-click="viewAllSites()"
+              ng-if="topSitesLimit != topSites.length && settings.topSitesViewMore">
               View More
             </a>
           </div>
@@ -78,7 +79,7 @@
   <div class="footer">
 
     <!-- Apps -->
-    <div class="apps">
+    <div class="apps" ng-if="settings.apps">
 
       <!-- Store -->
       <a class="app" ng-href="https://chrome.google.com/webstore" title="Web Store" data-tooltip>
