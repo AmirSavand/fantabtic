@@ -3,6 +3,16 @@
   "description": "Turn your boring new tab page into an inspirational beautiful page.",
   "version": "0.3.0",
   "incognito": "split",
+  "icons": {
+    "16": "img/icon16.png",
+    "19": "img/icon38.png",
+    "38": "img/icon38.png",
+    "48": "img/icon48.png",
+    "96": "img/icon96.png",
+    "128": "img/icon128.png",
+    "256": "img/icon256.png",
+    "512": "img/icon512.png"
+  },
   "permissions": [
     "topSites",
     "management",
