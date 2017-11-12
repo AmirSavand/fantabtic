@@ -1,6 +1,8 @@
 {
-  "name": "Fantabtic",
+  "name": "Fantabtic - New Tab",
+  "short_name": "Fantabtic",
   "description": "Turn your boring new tab page into an inspirational beautiful page.",
+  "author": "Amir Savand",
   "version": "0.3.0",
   "incognito": "split",
   "icons": {
