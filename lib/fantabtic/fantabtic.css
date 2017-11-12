@@ -18,19 +18,28 @@ body::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.1);
 }
 
-img {
+body:not(.loaded) img {
     opacity: 0;
 }
 
 a {
     text-decoration: none !important;
     outline: none !important;
-    text-shadow: 1px 1px 1px #000;
 }
 
 body,
 div {
     font-family: Roboto, sans-serif;
+}
+
+body:not(.modal)>a {
+    text-shadow: 1px 1px 1px #000;
+}
+
+a,
+.btn,
+[ng-click] {
+    cursor: pointer;
 }
 
 
@@ -71,6 +80,7 @@ body.loaded {
 .time {
     font-size: 1.2rem;
     text-shadow: 1px 1px 1px #000;
+    display: inline-block;
 }
 
 .time .time-numbers {
@@ -173,7 +183,6 @@ body.loaded {
     width: 20%;
     margin-left: 40%;
     margin-top: 10px;
-    cursor: pointer;
     padding: 10px;
     border-bottom: 3px solid transparent;
 }
@@ -220,7 +229,6 @@ body.loaded {
     padding: 10px;
     margin: 10px 5px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
     border-radius: 100%;
     transition: all 0.1s;
 }
@@ -271,3 +279,18 @@ body.loaded {
     outline: none !important;
 }
 
+
+/* Settings */
+
+.settings {
+    width: 100%;
+    color: #eee;
+}
+
+
+/* About */
+
+.about .btn {
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
