@@ -22,3 +22,11 @@ Turn your boring new tab page into an inspirational beautiful page.
 - Bing (Wallpaper)
 - Quotes.rest (Quotes)
 - Popper.js (For bootstrap)
+
+## Development
+
+Open chrome browser, go to `chrome://extensions/` and enable developer mode.
+
+Click on the "Load unpacked extension" button and select the project root folder.
+
+Open a new tab and you got it.
